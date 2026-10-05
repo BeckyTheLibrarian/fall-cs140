@@ -1,0 +1,72 @@
+/* ---------- PART 1: INHERITANCE ----------
+   Styles on body are INHERITED by everything inside it.
+   You set color and font-family ONCE here, and every
+   h1, h2, and p on the page gets them automatically. */
+
+body {
+  color: darkslategray;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  /* TRY IT: change the color to purple. What changes on the page? */
+  /* TRY IT: change the font-family to Georgia, serif */
+}
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+/* ---------- PART 2: CLASS  (starts with a dot .) ----------
+   A class can be used on MANY elements.
+   In the HTML: class="favorite"   (no dot in the HTML!) */
+
+.favorite {
+  color: crimson;
+  font-weight: bold;
+  /* TRY IT: change crimson to green */
+  /* TRY IT: add  background-color: lightyellow;  */
+}
+
+
+/* ---------- PART 3: ID  (starts with a hash #) ----------
+   An id is used on only ONE element per page.
+   In the HTML: id="page-title"   (no # in the HTML!) */
+
+#page-title {
+  color: navy;
+  font-size: 40px;
+  /* TRY IT: add  text-align: center;  */
+}
+
+
+/* ---------- PART 4: INHERITANCE INSIDE A BOX ----------
+   The h2 and p tags inside this div have NO styles of their
+   own, but they inherit the color from #special-box.
+
+   Notice: the BORDER does NOT get passed down to the h2 and p.
+   Text properties (color, font) inherit. Box properties
+   (border, padding, background, width) do NOT. */
+
+#special-box {
+  color: darkorange;
+  border: 3px solid darkorange;
+  padding: 10px;
+  /* TRY IT: change the color to teal. Do the h2 and p inside change? */
+}
+
+
+/* ---------- PART 5: CLASS + ID ON THE SAME ELEMENT ---------- */
+
+.note {
+  font-style: italic;
+  color: gray;
+}
+
+#footer {
+  font-size: 12px;
+  /* TRY IT: add  color: red;  here.
+     The footer has BOTH .note (gray) and #footer (red).
+     Which color wins? An id is more specific than a class,
+     so the id wins. */
+}
